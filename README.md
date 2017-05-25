@@ -102,7 +102,7 @@ return success with 200
 * /error [GET, POST, PUT, PATCH, DELETE]
 
 ```
-return error with 404
+return error with 400
 ```
 
 
