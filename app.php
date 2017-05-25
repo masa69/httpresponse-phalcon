@@ -183,8 +183,8 @@ $app->post('/upload', function () use ($app) {
 			throw new Exception('failed upload', 400);
 		}
 		$app->httpResponse->success([
-			'POST_REQUEST', $app->request->getPost(),
-			'UPLOAD_FILES', $app->request->getUploadedFiles(),
+			'POST_REQUEST' => $app->request->getPost(),
+			'UPLOAD_FILES' => $app->request->getUploadedFiles(),
 		]);
 	} catch (Exception $e) {
 		$app->httpResponse->error($e);
@@ -202,8 +202,8 @@ $app->put('/upload', function () use ($app) {
 			throw new Exception('failed upload', 400);
 		}
 		$app->httpResponse->success([
-			'PUT_REQUEST', $app->request->getPut(),
-			'UPLOAD_FILES', $app->request->getUploadedFiles(),
+			'PUT_REQUEST'  => $app->request->getPut(),
+			'UPLOAD_FILES' => $app->request->getUploadedFiles(),
 		]);
 	} catch (Exception $e) {
 		$app->httpResponse->error($e);
@@ -222,7 +222,7 @@ $app->patch('/upload', function () use ($app) {
 		}
 		$app->httpResponse->success([
 			'PATCH_REQUEST' => 'https://docs.phalconphp.com/ja/latest/api/Phalcon_Http_Request.html',
-			'UPLOAD_FILES' => $app->request->getUploadedFiles(),
+			'UPLOAD_FILES'  => $app->request->getUploadedFiles(),
 		]);
 	} catch (Exception $e) {
 		$app->httpResponse->error($e);
