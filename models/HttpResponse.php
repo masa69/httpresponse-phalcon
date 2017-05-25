@@ -21,7 +21,7 @@ class HttpResponse
 		$this->response->setHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
 		$this->response->setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Range, Content-Disposition, Content-Type, Authorization');
 		header('Access-Control-Allow-Credentials: true');
-		// $this->setAccessControlAllowOrigin();
+		$this->setAccessControlAllowOrigin();
 	}
 
 
