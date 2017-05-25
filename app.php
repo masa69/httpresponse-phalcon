@@ -184,7 +184,8 @@ $app->post('/upload', function () use ($app) {
 		}
 		$app->httpResponse->success([
 			'POST_REQUEST' => $app->request->getPost(),
-			'UPLOAD_FILES' => $app->request->getUploadedFiles(),
+			// 'UPLOAD_FILES' => $app->request->getUploadedFiles(),
+			'UPLOAD_FILES' => $_FILES,
 		]);
 	} catch (Exception $e) {
 		$app->httpResponse->error($e);
@@ -203,7 +204,8 @@ $app->put('/upload', function () use ($app) {
 		}
 		$app->httpResponse->success([
 			'PUT_REQUEST'  => $app->request->getPut(),
-			'UPLOAD_FILES' => $app->request->getUploadedFiles(),
+			// 'UPLOAD_FILES' => $app->request->getUploadedFiles(),
+			'UPLOAD_FILES' => $_FILES,
 		]);
 	} catch (Exception $e) {
 		$app->httpResponse->error($e);
@@ -222,7 +224,8 @@ $app->patch('/upload', function () use ($app) {
 		}
 		$app->httpResponse->success([
 			'PATCH_REQUEST' => 'https://docs.phalconphp.com/ja/latest/api/Phalcon_Http_Request.html',
-			'UPLOAD_FILES'  => $app->request->getUploadedFiles(),
+			// 'UPLOAD_FILES'  => $app->request->getUploadedFiles(),
+			'UPLOAD_FILES'  => $_FILES,
 		]);
 	} catch (Exception $e) {
 		$app->httpResponse->error($e);
